@@ -2,6 +2,11 @@
 
 A hybrid routing protocol implementation that combines DUAL (Diffusing Update Algorithm) with Machine Learning for superior performance compared to traditional protocols like RIP, OSPF, and EIGRP.
 
+## 🚀 Repository Information
+- **GitHub Repository**: [Python-GUI-for-ADUP](https://github.com/NuwanHapuarachchi/Python-GUI-for-ADUP)
+- **Author**: NuwanHapuarachchi
+- **License**: Educational and Research Use
+
 ## Features
 
 ### Core Protocol Features
@@ -12,6 +17,7 @@ A hybrid routing protocol implementation that combines DUAL (Diffusing Update Al
 - **Fast Convergence**: Instant failover with pre-calculated backup paths
 
 ### Implementation Features
+- **PyQt6 Desktop GUI**: Modern cross-platform desktop application with advanced visualization
 - **Real-time Simulation**: SimPy-based discrete-event simulation
 - **Web-based UI**: Interactive dashboard for monitoring and control
 - **Network Visualization**: Animated packet flow and topology display
@@ -22,41 +28,75 @@ A hybrid routing protocol implementation that combines DUAL (Diffusing Update Al
 
 ```
 adup/
-├── packets.py      # ADUP packet definitions (Hello, Update, Route Entry)
-├── router.py       # Router implementation with DUAL algorithm
-├── simulation.py   # Network simulation environment
-├── visualizer.py   # Network topology and packet visualization
-├── web_ui.py       # Web-based dashboard
+├── packets.py          # ADUP packet definitions (Hello, Update, Route Entry)
+├── router.py           # Router implementation with DUAL algorithm
+├── simulation.py       # Network simulation environment
+├── visualizer.py       # Network topology and packet visualization
+├── web_ui.py           # Web-based dashboard
+├── enhanced_web_ui.py  # Enhanced web interface
 └── __init__.py
 
-tests/              # Unit tests
-main.py            # Main entry point
+gui/
+├── main_window.py      # Main PyQt6 application window
+├── network_widget.py   # Network topology visualization widget
+├── metrics_widget.py   # Performance metrics display
+├── config_widget.py    # Configuration panel
+├── packet_log_widget.py # Packet logging interface
+├── routing_table_widget.py # Routing table display
+├── protocol_comparison_widget.py # Protocol comparison tools
+├── advanced_packet_viz.py # Advanced packet visualization
+└── __init__.py
+
+main.py            # Command-line entry point
+main_pyqt.py       # PyQt6 GUI entry point  
 requirements.txt   # Python dependencies
 ```
 
-## Installation
+## 🛠️ Installation
 
-1. Clone the repository and navigate to the project directory
-2. Create a virtual environment (automatically handled by VS Code)
-3. Install dependencies:
+### Quick Setup
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/NuwanHapuarachchi/Python-GUI-for-ADUP.git
+   cd Python-GUI-for-ADUP
+   ```
+
+2. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-## Usage
+### Dependencies
+- **Core**: `scapy`, `numpy`, `matplotlib`, `simpy`, `networkx`
+- **GUI**: `PyQt6`, `pyqtgraph`
+- **Web**: `websockets`
 
-### Command Line Simulation
+## 🎯 Usage
+
+### 🖥️ PyQt6 Desktop Application (Recommended)
+```bash
+python main_pyqt.py
+```
+**Features:**
+- Modern cross-platform GUI interface
+- Real-time network topology visualization
+- Advanced packet flow monitoring
+- Interactive routing table display
+- Performance metrics and charts
+- Protocol configuration controls
+
+### 🖲️ Command Line Simulation
 ```bash
 python main.py --mode simulation --duration 60
 ```
 
-### Web Interface
+### 🌐 Web Interface
 ```bash
 python main.py --mode web --port 8050
 ```
 Then open http://localhost:8050 in your browser.
 
-### Network Visualization
+### 📊 Network Visualization
 ```bash
 python main.py --mode visualize
 ```
@@ -106,7 +146,22 @@ Each router:
 - Performs DUAL calculations for route selection
 - Logs all protocol activities
 
-## Web Dashboard Features
+## 🖥️ PyQt6 Desktop Application Features
+
+### Main Interface
+- **Network Topology View**: Interactive visualization of router connections and packet flows
+- **Real-time Metrics**: Live charts showing delay, jitter, packet loss, and throughput
+- **Routing Tables**: Dynamic display of each router's forwarding information base
+- **Packet Log**: Detailed chronological view of all protocol messages
+- **Configuration Panel**: Easy setup of simulation parameters and protocol settings
+
+### Advanced Visualization
+- **Animated Packet Flow**: Real-time visualization of packet transmission
+- **Performance Graphs**: Historical and real-time performance metrics
+- **Protocol Comparison**: Side-by-side comparison with RIP, OSPF, and EIGRP
+- **Network Statistics**: Comprehensive network health monitoring
+
+## 🌐 Web Dashboard Features
 
 - **Real-time Network Topology**: Visual representation of router connections
 - **Routing Tables**: Live view of each router's forwarding information base
@@ -132,29 +187,53 @@ Each router:
 - Support for additional metrics
 - Pluggable visualization backends
 
-## Future Enhancements
+## 🔬 Future Enhancements
 
 1. **Real Network Integration**: Support for actual network interfaces
 2. **Advanced ML Models**: Q-learning and neural network path optimization
 3. **Security Features**: Authentication and encryption support
 4. **Scalability Testing**: Large-scale network simulations
 5. **Performance Analysis**: Detailed comparison with existing protocols
+6. **Mobile App**: Cross-platform mobile monitoring application
 
-## Contributing
+## 🤝 Contributing
 
 This is a research implementation of the ADUP protocol. Contributions are welcome for:
 - Protocol optimizations
 - Additional visualization features
 - Performance improvements
 - Real-world testing scenarios
+- Bug fixes and code improvements
 
-## License
+### How to Contribute
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
 
 This project is for educational and research purposes.
 
-## Desktop Application
+## 📞 Contact
 
-ADUP now includes a modern **Electron.js desktop application** for enhanced visualization and control:
+- **Author**: NuwanHapuarachchi
+- **Email**: hapuarachchihadnd,22@uom.lk
+- **GitHub**: [NuwanHapuarachchi](https://github.com/NuwanHapuarachchi)
+- **Repository**: [Python-GUI-for-ADUP](https://github.com/NuwanHapuarachchi/Python-GUI-for-ADUP)
+
+---
+
+## 🗂️ Legacy Documentation
+
+### Desktop Application (Electron.js - Not Currently Available)
+
+### Desktop Application (Electron.js - Not Currently Available)
+
+*Note: The following Electron.js desktop application features are planned for future implementation but not currently available in this repository.*
+
+ADUP was designed to include a modern **Electron.js desktop application** for enhanced visualization and control:
 
 ### Desktop App Features
 - **Native Desktop Experience**: Cross-platform desktop application (Windows, macOS, Linux)
