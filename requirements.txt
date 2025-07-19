@@ -1,0 +1,15 @@
+# ADUP - Advanced Diffusing Update Protocol
+# Core simulation dependencies
+scapy>=2.4.5
+numpy>=1.21.0
+matplotlib>=3.5.0
+simpy>=4.0.1
+networkx>=2.6
+
+# PyQt6 GUI dependencies
+PyQt6>=6.4.0
+PyQt6-tools>=6.4.0
+pyqtgraph>=0.13.0
+
+# Additional utilities
+websockets>=10.0
